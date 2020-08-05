@@ -49,20 +49,6 @@ const Sidebar = props => {
       icon: <LiveHelpRoundedIcon />
     },
     {
-      title: 'Broadcasts',
-      href: '/#',
-      items: [
-        { title: 'Schedule', href: '/schedule', icon: <ScheduleIcon /> },
-        { title: 'Broadcasts', href: '/broadcasts', icon: <ViewListIcon /> },
-      ],
-      icon: <CastIcon />
-    },
-    {
-      title: 'Messages',
-      href: '/chat',
-      icon: <QuestionAnswerIcon />
-    },
-    {
       title: 'Users',
       href: '/users',
       icon: <PeopleIcon />

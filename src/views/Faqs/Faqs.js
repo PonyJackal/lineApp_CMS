@@ -18,7 +18,6 @@ const Faqs = () => {
 
   return (
     <div className={classes.root}>
-      <FaqsToolbar />
       <div className={classes.content}>
         <FaqsTable title="Faqs" />
       </div>

@@ -7,7 +7,6 @@ import {
   Typography
 } from '@material-ui/core';
 
-import MUIDataTable from "mui-datatables";
 import MaterialTable from 'material-table';
 import DataTable from '../../../../components/DataTable';
 import useActions from '../../../../lib/useActions';
