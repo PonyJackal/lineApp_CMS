@@ -209,12 +209,7 @@ const SignIn = props => {
         >
           <div className={classes.quote}>
             <div className={classes.quoteInner}>
-              <Typography
-                className={classes.quoteText}
-                variant="h1"
-              >
-                FRUIT TRUCK DELIVERY ORDERS & RESERVATIONS
-              </Typography>
+
             </div>
           </div>
         </Grid>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import moment from 'moment';
@@ -39,13 +40,7 @@ const AccountProfile = props => {
 
   const classes = useStyles();
 
-  const user = {
-    name: 'Irina Kleinsasser',
-    city: 'South Dakota',
-    country: 'USA',
-    timezone: 'GTM-7',
-    avatar: '/images/avatars/irina.jpeg'
-  };
+  const admin = useSelector(({ auth }) => auth.admin)
 
   return (
     <Card
@@ -59,26 +54,12 @@ const AccountProfile = props => {
               gutterBottom
               variant="h2"
             >
-              {user.name}
-            </Typography>
-            <Typography
-              className={classes.locationText}
-              color="textSecondary"
-              variant="body1"
-            >
-              {user.city}, {user.country}
-            </Typography>
-            <Typography
-              className={classes.dateText}
-              color="textSecondary"
-              variant="body1"
-            >
-              {moment().format('hh:mm A')} ({user.timezone})
+              {admin.name}
             </Typography>
           </div>
           <Avatar
             className={classes.avatar}
-            src={user.avatar}
+            src={admin.avatar}
           />
         </div>
         <div className={classes.progress}>

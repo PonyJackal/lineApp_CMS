@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link as RouterLink } from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
@@ -26,11 +27,7 @@ const Profile = props => {
 
   const classes = useStyles();
 
-  const user = {
-    name: 'Irina Kleinsasser',
-    avatar: './images/avatars/irina.jpeg',
-    bio: 'CEO & President'
-  };
+  const admin = useSelector(({ auth }) => auth.admin)
 
   return (
     <div
@@ -41,16 +38,15 @@ const Profile = props => {
         alt="Person"
         className={classes.avatar}
         component={RouterLink}
-        src={user.avatar}
         to="/settings"
       />
       <Typography
         className={classes.name}
         variant="h4"
       >
-        {user.name}
+        {admin.name}
       </Typography>
-      <Typography variant="body2">{user.bio}</Typography>
+      {/* <Typography variant="body2">{user.bio}</Typography> */}
     </div>
   );
 };
