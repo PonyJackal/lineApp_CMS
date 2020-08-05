@@ -10,6 +10,7 @@ import CastIcon from '@material-ui/icons/Cast';
 import ScheduleIcon from '@material-ui/icons/Schedule';
 import ViewListIcon from '@material-ui/icons/ViewList';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
+import LiveHelpRoundedIcon from '@material-ui/icons/LiveHelpRounded';
 
 import { Profile, SidebarNav, /*UpgradePlan*/ } from './components';
 
@@ -43,9 +44,9 @@ const Sidebar = props => {
 
   const pages = [
     {
-      title: 'Customers',
-      href: '/customers',
-      icon: <PeopleIcon />
+      title: 'FAQs',
+      href: '/faqs',
+      icon: <LiveHelpRoundedIcon />
     },
     {
       title: 'Broadcasts',

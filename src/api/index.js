@@ -1,4 +1,9 @@
 export { signin as signinAPI } from './api'
+export { getFaqs as getFaqsAPI } from './api'
+export { createFaq as createFaqAPI } from './api'
+export { updateFaq as updateFaqAPI } from './api'
+export { removeFaq as removeFaqAPI } from './api'
+
 export { importCustomers as importCustomersAPI } from './api'
 export { addCustomer as addCustomerAPI } from './api'
 export { getCustomers as getCustomersAPI } from './api'

@@ -5,12 +5,12 @@ const makeAPI = () => {
     const token = localStorage.getItem('token');
 
     const API = axios.create({
-        baseURL: 'http://161.35.118.222/',
-        // baseURL: 'http://localhost:8000/',
+        // baseURL: 'http://161.35.118.222/',
+        baseURL: 'http://localhost:3000/api/v1',
         headers: {
             'Content-Type': 'application/json',
             // 'Access-Control-Allow-Origin': '*',
-            'Authorization': token ? `Bearer ${token}` : '',
+            'Authorization': token ? `${token}` : '',
         },
     })
 
@@ -18,7 +18,19 @@ const makeAPI = () => {
 }
 
 export const signin = ({ email, password }) =>
-    makeAPI().post('api/auth/signin', { email, password });
+    makeAPI().post('login', { email, password });
+
+export const getFaqs = () =>
+    makeAPI().get('faqs')
+
+export const createFaq = (faq) =>
+    makeAPI().post('faqs', faq)
+
+export const updateFaq = ({ id, faq }) =>
+    makeAPI().patch(`faqs/${id}`, faq)
+
+export const removeFaq = (id) =>
+    makeAPI().delete(`faqs/${id}`)
 
 export const importCustomers = (customers) =>
     makeAPI().post('api/importCustomer', customers)

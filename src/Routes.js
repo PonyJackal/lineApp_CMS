@@ -17,7 +17,7 @@ import {
   NotFound as NotFoundView,
   ScheduleBroadcast as ScheduleBroadcastView,
   Broadcasts as BroadcastsView,
-  Customers as CustomersView,
+  Faqs as FaqsView,
   Chat as ChatView,
   AddCustomer as AddCustomerView
 } from './views';
@@ -49,10 +49,10 @@ const Routes = () => {
         path="/broadcasts"
       />
       <PrivateRouteWithLayout
-        component={CustomersView}
+        component={FaqsView}
         exact
         layout={MainLayout}
-        path="/customers"
+        path="/faqs"
       />
       <PrivateRouteWithLayout
         component={UserListView}
