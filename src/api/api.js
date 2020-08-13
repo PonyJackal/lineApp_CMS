@@ -6,7 +6,7 @@ const makeAPI = () => {
 
     const API = axios.create({
         // baseURL: 'http://161.35.118.222/',
-        baseURL: 'http://localhost:3001/api/v1',
+        baseURL: 'http://localhost:3002/api/v1',
         headers: {
             'Content-Type': 'application/json',
             // 'Access-Control-Allow-Origin': '*',
