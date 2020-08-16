@@ -11,7 +11,8 @@ const makeAPI = () => {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
             'Authorization': token ? `${token}` : '',
-            'Access-Control-Allow-Origin': 'http://beta3-lineapp.simplyintense.com'
+            'Access-Control-Allow-Headers': 'origin, content-type',
+            'Access-Control-Allow-Credentials': true
         },
     })
 
