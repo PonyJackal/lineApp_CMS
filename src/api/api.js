@@ -13,6 +13,8 @@ const makeAPI = () => {
             'Authorization': token ? `${token}` : '',
             // 'Access-Control-Allow-Headers': 'origin, content-type',
             // 'Access-Control-Allow-Credentials': true
+            'Origin': 'beta2-lineapp.simplyintense.com'
+
         },
     })
 
