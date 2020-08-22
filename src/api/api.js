@@ -9,10 +9,10 @@ const makeAPI = () => {
         baseURL: 'http://beta3-lineapp.simplyintense.com/api/v1',
         headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
+            // 'Access-Control-Allow-Origin': '*',
             'Authorization': token ? `${token}` : '',
-            'Access-Control-Allow-Headers': 'origin, content-type',
-            'Access-Control-Allow-Credentials': true
+            // 'Access-Control-Allow-Headers': 'origin, content-type',
+            // 'Access-Control-Allow-Credentials': true
         },
     })
 
